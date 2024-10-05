@@ -1,0 +1,233 @@
+/* styles.css */
+body {
+    margin: 0;
+    background-color: black; /* Set background color to black for night sky */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.night-sky {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+}
+
+.star {
+    position: absolute;
+    background-color: rgb(217, 186, 12); /* Star color */
+    clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+    ); /* Star shape using clip-path */
+    animation: twinkle 0.75s infinite alternate; /* Twinkling effect */
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Rocket Styles */
+.rocket-container {
+    position: absolute;
+    bottom: 200px; /* Position from the bottom */
+    left: 0; /* Start from the left */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rocket {
+    width: 250px; /* Adjust the rocket size */
+    animation: moveRocket 3s forwards; /* Rocket animation */
+}
+
+
+.heading {
+    display: block; /* Make the heading visible */
+    color: rgb(124, 179, 231); /* Heading color */
+    position: absolute; /* Position it relative to the rocket */
+    text-align: center;
+    top: 60px; /* Adjust position above the rocket */
+    right: -250%;
+    transform: translateX(-50%); /* Offset the heading to center */
+    font-size: 50px; /* Adjust font size */
+    font-family:cursive;
+    font-weight: bold;
+    text-shadow: 
+        0 0 5px rgba(29, 64, 202, 0.7), /* Glow effect */
+        0 0 10px rgba(0, 59, 115, 0.5), 
+        0 0 15px rgba(8, 21, 50, 0.872); /* Softening the glow */
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 3s forwards; /* Fade-in animation */
+}
+
+.subheading {
+    color: #8499e0; /* White color for the subheading */
+    font-size: 20px; /* Font size for the subheading */
+    top: 150px;
+    right: -250%;
+    position: absolute;
+    font-family: cursive; /* Font family */
+    text-align: center; /* Center align the text */
+    margin-top: 10px; /* Space above the subheading */
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 3s forwards; /* Fade-in animation */
+}
+
+    
+
+/* Hover Effect */
+.heading:hover {
+    color: #ecf53e; /* Change color on hover */
+    transform: scale(0.5); /* Slightly enlarge on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+@keyframes moveRocket {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100vw); } /* Move to the right edge */
+}
+
+/* styles.css */
+body {
+    margin: 0;
+    background-color: black; /* Set background color to black for night sky */
+    overflow: hidden; /* Prevent scrolling */
+    color: white; /* Default text color */
+}
+
+.night-sky {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+}
+
+.planet-container {
+    position: absolute; /* Position each planet container absolutely */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* TOI 849b Position */
+.planet-container:nth-child(1) {
+    top: 10px; /* Adjust based on your design */
+    left: 70px; 
+}
+
+/* Kelt-9b Position */
+.planet-container:nth-child(2) {
+    top: 250px; /* Adjust based on your design */
+    left: 70px;
+   
+}
+
+/* Kepler-7b Position */
+.planet-container:nth-child(3) {
+    top: 10px; /* Adjust based on your design */
+    right: 80px;
+}
+
+/* TIC 172900988b Position */
+.planet-container:nth-child(4) {
+    top: 250px; /* Adjust based on your design */
+    right: 80px; 
+}
+
+/* Planet Image Styles */
+.planet-image,
+.planet1-image,
+.planet2-image,
+.planet3-image,
+.planet4-image {
+    width: 150px; /* Set width of the planet image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Subhead Styles */
+.subhead,
+.subhead1,
+.subhead2,
+.subhead3 {
+    font-size: 20px; /* Font size for the subheading */
+    font-family: cursive; /* Font family */
+    text-align: center; /* Center align the text */
+}
+
+/* Button Styles */
+.button {
+    
+        margin: 20px auto; /* Center the button with top spacing */
+        padding: 2px 40px; /* Button padding */
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border: none; /* Remove border */
+        font-size: 16px; /* Base font size */
+        border-radius: 10px; /* Rounded corners */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and scaling */
+    
+}
+
+/* Hover Effect */
+.button:hover {
+    text-align: center;
+    font-size: 28px;
+    transition: all 0.5s;
+    background-color: #45a049; /* Darker green on hover */
+    
+}
+
+/* Existing styles for other pages */
+body {
+    margin: 0;
+    background-color: rgb(9, 1, 1); /* Previous background color */
+    color: rgba(243, 245, 241, 0.947); /* Previous text color */
+}
+
+/* Other styles... */
+
+/* Add the new styles here */
+h1 {
+    text-align: center;
+    color: #ecf53e;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+p{
+    margin: 10px 0;
+    line-height: 1.6;
+    font-family: cursive;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #a1a817;
+    color: rgb(9, 1, 1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Any additional styles... */

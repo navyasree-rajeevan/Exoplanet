@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page1</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Example styling for visibility */
+        .button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="sky.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="night-sky" id="night-sky">
+        <!-- Stars will be added here by JavaScript -->
+        
+        <!-- Planet 1 -->
+        <div class="planet-container">
+            <img src="toi849b.png" alt="Planet TOI 849 b" class="planet1-image"> 
+            <p class="subhead">TOI 849 b</p>
+            <button class="button" onclick="goToDetails()">View Details</button>
+        </div>
+
+        <!-- Planet 2 -->
+        <div class="planet-container">
+            <img src="kelt-9-b.png" alt="Planet Kelt 9 b" class="planet2-image"> 
+            <p class="subhead1">Kelt 9 b</p> 
+            <button class="button" onclick="goToDetails2()">View Details</button>
+        </div>
+
+
+        <!-- Planet 3 -->
+        <div class="planet-container">
+            <img src="kepler-7b.png" alt="Planet Kepler 7 b" class="planet3-image"> 
+            <p class="subhead2">Kepler 7 b</p>
+            <button class="button" onclick="goToDetails3()">View Details</button>
+
+        </div>
+
+        <!-- Planet 4 -->
+        <div class="planet-container">
+            <img src="TIC172900988b.png" alt="Planet TIC 172900988 b" class="planet4-image"> 
+            <p class="subhead3">TIC 172900988 b</p>
+            <button class="button" onclick="goToDetails4()">View Details</button>
+
+        </div>
+    </div>
+
+    <script>
+        function goToDetails() {
+            window.location.href = 'toi.html'; // Adjust the path as needed
+        }
+    </script>
+    <script>
+        function goToDetails2() {
+            window.location.href = 'kelt.html'; // Adjust the path as needed
+        }
+    </script>
+    <script>
+        function goToDetails3() {
+            window.location.href = 'kep7b.html'; // Adjust the path as needed
+        }
+    </script>
+    <script>
+        function goToDetails4() {
+            window.location.href = 'tic.html'; // Adjust the path as needed
+        }
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
